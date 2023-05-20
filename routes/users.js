@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-// User data storage (can be replaced with a database)
 const users = [];
 
 // Route to add a new user
@@ -23,8 +22,6 @@ router.post('/users', (req, res) => {
     username,
     password
   };
-
-  // Add the user to the array
   users.push(newUser);
 
   return res.status(201).json({ message: 'User created successfully' });
